@@ -1,0 +1,51 @@
+# 2. FIRST STEPS: REACT AND TYPESCRIPT
+--------------------------------------
+
+* Introduction to TypeScript with React
+---------------------------------------
+. Basics of a TypeScript project:
+	
+"@types/jest": "^27.5.2",
+"@types/node": "^16.18.96",
+"@types/react": "^18.2.79",
+
+These files support the custom type definitions that come with a React project such as jest, node and react types.  
+
+tsconfig.json
+-------------
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src"
+  ]
+}
+
+
+This is the one file neede to be able to use TypeScript in the project.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
