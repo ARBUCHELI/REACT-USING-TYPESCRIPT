@@ -11,3 +11,24 @@ npm start
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Install TypeScript
+--------------------
+- These methods are deprecated:
+
+npm install --save typescript @types/node @types/react-dom @types/jest
+
+Now is important to rename the .js files to .tsx
+
+After running npm start -> a tsconfig.json file is going to be created.
+
+- I'm using these other methods better:
+
+npx create-react-app react-typescript --template typescript
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
