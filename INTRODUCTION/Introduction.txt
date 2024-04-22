@@ -1,0 +1,29 @@
+# INTRODUCTION
+--------------
+
+* Create web apps using the React component approach with TypeScript
+--------------------------------------------------------------------
+When writing applications in React you wish that you would have better type checking, or cleaner code, or better error prevention.
+
+React has some options such as proptypes and flow.
+
+TYPESCRIPT IS A MORE MATURE OPTION.
+
+* typeScript
+------------
+Superset of JavaScript that implements many coding best practices and type checking.
+
+We are going to write React apps, leveraging typeScript tools and frameworks.
+
+* Course
+--------
+- How to set up typeScript.
+- How to use types into React.
+- How to use stateful and functional components within the context of using typeScript.
+- typeScript interfaces.
+- Higher order components --> How to work with them with typeScript.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
