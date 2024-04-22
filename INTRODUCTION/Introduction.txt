@@ -25,5 +25,10 @@ We are going to write React apps, leveraging typeScript tools and frameworks.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* What you should know
+----------------------
+- TypeScript -> No experience is necessary.
+- React -> Some experience is needed.
+
 
 
