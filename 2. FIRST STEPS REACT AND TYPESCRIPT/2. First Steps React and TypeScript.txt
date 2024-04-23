@@ -45,6 +45,55 @@ This is the one file neede to be able to use TypeScript in the project.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Basic types
+-------------
+
+This is how we define a type for our variables:
+
+let firstValue: string = 'Manny';
+let firstValue: number = 34;
+let firstValue: boolean = true;
+
+In order to define the type of an array we do this:
+
+let firstValue: number[] = [2, 3, 56];
+
+Or we can do this: (For example in the case that we are creating an array of strings):
+
+let firstValue: Array<string> = ['2', '3', 'manny'];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
