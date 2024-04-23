@@ -96,6 +96,57 @@ export default App;
 * Other complex types
 ---------------------
 
+. Tuple
+-------
+A tuple is a type of array that you can insert multiple types.
+
+let aTuple: [string, number] = ['Manny', 34];
+
+. enum
+------
+They are similar to objects.
+
+ enum Codes {first = 1, second = 2};
+
+. any
+-----
+Use any when you are not sure what the type should be.
+
+let firstName: any = 3;
+
+. void
+------
+We use void for example for functions return types:
+
+ const warning = (): void => {
+      console.log('Warning');
+    }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
