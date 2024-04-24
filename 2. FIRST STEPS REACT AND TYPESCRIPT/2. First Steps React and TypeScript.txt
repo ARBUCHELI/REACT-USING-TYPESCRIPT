@@ -302,6 +302,80 @@ class Ninja extends Warrior {
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Class/stateful component syntax
+---------------------------------
+Let's explore some lyfecycle methods.  For example componentWillMount()
+
+componentWillMount() will run as your component will mount. ---> This is before.
+
+componentDidMount() will run when the component is mounted. ---> This is once the component is mounted.
+
+App.tsx
+-------
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Message from './Message';
+
+class App extends Component<any> {
+  componentWillMount() {
+    console.log('Almost there...');
+  }
+
+  componentDidMount() {
+    console.log('Finally...hello!');
+  }
+
+  render() { 
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Message message='This is a simple message'/>
+        </header>
+      </div>
+    );
+  }
+
+}
+
+export default App;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
