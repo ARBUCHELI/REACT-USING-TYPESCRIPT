@@ -224,7 +224,7 @@ Message.tsx
 -----------
 import React from 'react';
 
-const Message = (prop: {message: string}): any => { * ---> Here we specify the return type that is any, but React will infer that is any if we don't specify it here.
+const Message = (prop: {message: string}): any => { ---> Here we specify the return type that is any, but React will infer that is any if we don't specify it here.
     return (
         <p>This is a quick message!!!</p>
     )
@@ -256,6 +256,91 @@ class App extends Component {
 export default App;
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Class/stateful component intro
+--------------------------------
+
+. Class
+-------
+Allows the programmer to crete a type of blueprint for specific code and attach methods and other properties that can be leveraged later.
+
+. Example - Warrior Class
+-------------------------
+
+class Warrior {
+	strength: number;
+	agility: number;
+
+	constructor(strength, agility) {
+		this.strength = strenght;
+		this.agility = agility;
+	}
+
+	fight() {
+		return this.strength *  this.agility;
+	}
+}
+
+We can extend the Warrior class to a Ninja class:
+
+class Ninja extends Warrior {
+	shuriken: number;
+
+	constructor (shuriken, strength, agility) {
+		super strength, agility;
+		this.shuriken = shuriken;
+	}
+
+	throwShuriken(shuriken) {
+		return shuriken ? "Shuriken thrown" : "No shuriken left";
+	}
+}
+
+. Class methods in React are created extending the Component class in the React library. ---> THIS GIVES US ACCESS TO LYFECYCLE METHODS AND STATE.
+
+. If you have to create class methods, try to always create functional components first.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
