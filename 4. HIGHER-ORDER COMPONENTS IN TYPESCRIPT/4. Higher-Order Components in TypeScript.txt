@@ -11,3 +11,114 @@ We can create a function to create new components where we pass the differences 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Implementing HOCs in TypeScript
+---------------------------------
+
+App.tsx
+-------
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Message from './Message';
+
+class App extends Component {
+  render() { 
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Message />
+        </header>
+      </div>
+    );
+  }
+
+}
+
+export default App;
+
+HOC.tsx
+-------
+import React, { Component } from 'react';
+
+// Define the state
+const initialState = {
+    name: 'Manny',
+    //message: 'TypeScript is cool!!'
+    message: 'HOCs are cool!!'
+  }
+  
+// Define the type of the state
+type State = Readonly<typeof initialState>;
+
+// This function will return a class
+const messageHoc = (WrappedComponent: any) => {
+    class HOC extends Component<{}, State> {
+        readonly state: State = initialState;
+
+        render() {
+            return (
+                <WrappedComponent name={this.state.name} message={this.state.message} />
+            )
+        }
+    }
+
+    return HOC;
+}
+
+export default messageHoc;
+
+Message.tsx
+-----------
+import React from 'react';
+import messageHoc from './HOC';
+
+/*interface UserMessage {
+    name: string;
+    message: string;
+}
+
+const Message = (props: UserMessage): any => {
+    return (
+        <p>{props.name}, {props.message}</p>
+    )
+}
+
+export default Message;*/
+
+const example = (props: any): any => <p>{props.name}, {props.message}</p>
+
+const Message = messageHoc(example);
+
+export default Message;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
