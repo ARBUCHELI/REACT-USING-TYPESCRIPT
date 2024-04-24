@@ -90,6 +90,43 @@ export default App;
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Review best practices interfaces
+----------------------------------
+. Don't show in the compiled javaScript code.
+
+. Specially used for props in the components.
+
+. Proper method
+---------------
+	Define props in the interface
+	
+	Pass them into the component
+
+. When we need to use optional properties
+	If the data passed is missing one or two properties --> We can use a question mark
+
+Interface Warrior {
+	money?: number
+}
+
+. readOnly --> items that can only be read once created --> ONLY ALLOW TO CREATE THE VALUE ONCE AND THEN YOU CAN'T CHANGE IT
+
+IF YOU CREATE AN INTERFACE WITH READONLY PROPERTIES IT MEANS THESE PROPS IN YOUR REACT COMPONENT CAN ONLY BE CREATED ONCE AND NOT BE CHANGED AFTER THE FACT.
+
+. Interfaces can also be used to define function types
+------------------------------------------------------
+
+interface SearchFunc {
+	(source: string, subString: string): boolean;
+}
+
+let mySearch: searchFunc;
+
+mySearch = function(source: string, subString: string) {
+	let result = source.search(subString);
+	return result > -1;
+}
+
 
 
 
