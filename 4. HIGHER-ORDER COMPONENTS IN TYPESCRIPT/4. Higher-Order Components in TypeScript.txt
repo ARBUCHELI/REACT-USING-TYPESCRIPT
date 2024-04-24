@@ -1,0 +1,13 @@
+# 4. HIGHER-ORDER COMPONENTS IN TYPESCRIPT
+------------------------------------------
+
+* Overview of higher-order component (HOCs)
+-------------------------------------------
+HOCs are functions that take your component and return a new one.
+
+when you have components that are similar but have slight differences this would be an ideal case for it.
+
+We can create a function to create new components where we pass the differences for each and the similarities are created with the HOC.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
