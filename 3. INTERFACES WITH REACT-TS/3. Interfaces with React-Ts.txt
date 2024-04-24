@@ -1,0 +1,53 @@
+# 3. INTERFACES WITH REACT/TS
+-----------------------------
+
+* Introduction to interface
+---------------------------
+We use interfaces to define how the shape of our data would look like, and the types associated with the properties.
+
+. Interfaces are only used by the compiler to check for types and validate to make sure that we are using the proper types upon compiling.
+
+. Interfaces only can be created when the project is configured with typeScript.
+
+App.tsx
+-------
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Message from './Message';
+
+class App extends Component<any> {
+  render() { 
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Message name='Manny' message='this is a simple message'/>
+        </header>
+      </div>
+    );
+  }
+
+}
+
+export default App;
+
+Message.tsx
+-----------
+import React from 'react';
+
+interface UserMessage {
+    name: string;
+    message: string;
+}
+
+const Message = (props: UserMessage): any => {
+    return (
+        <p>{props.name}, {props.message}</p>
+    )
+}
+
+export default Message;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
