@@ -216,6 +216,74 @@ export default Message;
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* Functional/stateles component syntax
+--------------------------------------
+When we have components that accept props in typescript, we need to specify the type:
+
+Message.tsx
+-----------
+import React from 'react';
+
+const Message = (prop: {message: string}): any => { * ---> Here we specify the return type that is any, but React will infer that is any if we don't specify it here.
+    return (
+        <p>This is a quick message!!!</p>
+    )
+}
+
+export default Message;
+
+App.tsx
+-------
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import Message from './Message';
+
+class App extends Component {
+  render() { 
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <Message message='This is a simple message'/>
+        </header>
+      </div>
+    );
+  }
+
+}
+
+export default App;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
