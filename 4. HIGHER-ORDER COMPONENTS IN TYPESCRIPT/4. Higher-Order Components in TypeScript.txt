@@ -94,6 +94,16 @@ export default Message;
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+* HOCs best practices
+---------------------
+. Don't change the HOC once in use.
+
+. If you need to pass props to a wrap component, pass them through as the example we studied before:
+
+	<WrappedComponent injectedProp={injectedProp} {...passThroughProps} />
+
+
+. Don't use HOCs inside the render method.
 
 
 
